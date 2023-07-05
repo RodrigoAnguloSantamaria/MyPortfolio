@@ -25,7 +25,8 @@ form.addEventListener("submit", (e) => {
         .catch(error => console.error('Error:', error))
 
         .then(response => {
-            console.log(response)
+            alert("Mensaje enviado. Muchas gracias");
+            document.location.href("/index.html");
 
         })
     })
