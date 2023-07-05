@@ -13,7 +13,19 @@ form.addEventListener("submit", (e) => {
         "mensaje": mensaje.value,
 
     }
-    console.log(post);
+    const call=fetch("https://my-test-api.vercel.app/post", {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(post), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
+        } 
+        })
+        .then(res => res.json())
+     
+        .catch(error => console.error('Error:', error))
 
-  
-});
+        .then(response => {
+            console.log(response)
+
+        })
+    })
