@@ -25,8 +25,18 @@ form.addEventListener("submit", (e) => {
         .catch(error => console.error('Error:', error))
 
         .then(response => {
-            alert("Mensaje enviado. Muchas gracias");
-            document.location.href("/index.html");
+            let btn=document.getElementById("btnsend");
+            btn.style.visibility = "hidden";
+            let mensaje=document.createElement("p");
+            mensaje.innerHTML="Mensaje enviado. Muchas gracias.";
+            form.append(mensaje);
+            //redirigir al about
+
+            setTimeout(function(){
+                window.location.href = "./about.html";
+            }, 2000);
+            
+          
 
         })
     })
