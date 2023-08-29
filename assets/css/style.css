@@ -1064,6 +1064,12 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
+.ico-portfolio{
+  width: 25px;
+  height: 30px;
+  margin:0px 5px;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
